@@ -6,6 +6,7 @@ export const NotesContext = createContext();
 export default function NotesProvider({ children }) {
   const [notes, setNotes] = useState([]);
   const [selectedNote, setSelectedNote] = useState(null);
+  const [isViewModalOpen, setIsViewModalOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [mode, setMode] = useState("create");
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
@@ -70,6 +71,8 @@ export default function NotesProvider({ children }) {
         updateNote,
         deleteNote,
         deleteAllNotes,
+        isViewModalOpen,
+        setIsViewModalOpen,
         isModalOpen,
         setIsModalOpen,
         mode,

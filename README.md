@@ -1,10 +1,13 @@
 # 🧾 NoteFlow
 
-A modern note-taking web application that helps users capture ideas, organize thoughts, and stay productive. NoteFlow provides a clean and responsive interface for creating, editing, searching, sorting, and managing notes efficiently.
+A modern note-taking application built with Next.js 16, React, and Tailwind CSS that helps users capture ideas, organize thoughts, and stay productive.
+
+NoteFlow features a beautiful landing page, responsive dashboard, dark mode support, note management tools, smooth animations, and local storage persistence for a seamless user experience.
 ---
 
 ## 📌 Table of Contents
 - <a href="#overview">Overview</a>
+- <a href="#features">Features</a>
 - <a href="#business-problem">Business Problem</a>
 - <a href="#dataset">Dataset</a>
 - <a href="#tools--technologies">Tools & Technologies</a>
@@ -16,22 +19,67 @@ A modern note-taking web application that helps users capture ideas, organize th
 ---
 <h2><a class="anchor" id="overview"></a>Overview</h2>
 
-NoteFlow is a lightweight note management application built with Next.js and React. It allows users to create, edit, delete, search, and organize notes in a simple and intuitive dashboard.
+NoteFlow is a lightweight note management platform designed for students, developers, writers, and professionals who want a simple way to organize their thoughts.
 
-The application features a modern landing page, dark mode support, responsive design, note management tools, and local storage persistence so notes remain available even after refreshing the browser.
+Users can:
+
+- Create notes
+- Edit existing notes
+- Delete notes
+- Search notes instantly
+- Sort notes by date
+- Toggle dark mode
+- View notes in a dedicated modal
+- Store notes locally without authentication
+
+All notes are saved in browser Local Storage, ensuring data remains available even after refreshing the page.
 
 ---
+<h2><a class="anchor" id="business-problem"></a>Features</h2>
+
+### Landing Page
+- Modern SaaS-style design
+- Responsive navigation bar
+- Dark mode toggle
+- Animated hero section
+- About section
+- Features section
+- Contact form
+- Footer section
+
+### Notes Dashboard
+- Create Notes
+- Edit Notes
+- View Full Notes
+- Delete Individual Notes
+- Delete All Notes
+- Search Notes by Title
+- Sort Latest Notes
+- Sort Oldest Notes
+- Random Colored Note Cards
+- Character Counter (500 characters)
+- Responsive Layout
+
+### User Experience
+- Dark Mode Support
+- Smooth Motion Animations
+- Toast Notifications
+- Mobile-Friendly Design
+- Local Storage Persistence
+---
+
 <h2><a class="anchor" id="business-problem"></a>Business Problem</h2>
 
-Many users struggle with keeping track of ideas, tasks, and important information across multiple platforms. Traditional note-taking solutions can be overly complex or require account creation and cloud synchronization.
+Many note-taking applications require user registration, cloud synchronization, and complex workflows.
+For users who simply want a fast and distraction-free workspace, these solutions can feel overwhelming.
 
-NoteFlow solves this problem by providing:
-- Quick note creation and management
-- Instant access to stored notes
-- Simple and distraction-free interface
-- Search functionality for finding notes quickly
-- Dark mode for improved user experience
-- Local storage persistence without requiring authentication
+NoteFlow solves this by providing:
+- Instant note creation
+- No authentication required
+- Simple and clean interface
+- Fast note retrieval
+- Lightweight local storage solution
+- Responsive experience across devices
 
 ---
 <h2><a class="anchor" id="dataset"></a>Dataset</h2>
@@ -93,11 +141,13 @@ The application performs CRUD operations on this locally stored data.
 NoteFlow/
 │
 ├── app/
-│   ├── page.jsx
-│   ├── layout.jsx
+│   ├── page.js
+│   ├── layout.js
+│   │
 │   ├── dashboard/
-│   │   ├── page.jsx
-│   │   └── layout.jsx
+│   │   ├── page.js
+│   │   └── layout.js
+│   │
 │   └── context/
 │       └── NotesContext.jsx
 │
@@ -108,10 +158,13 @@ NoteFlow/
 │   ├── Services.jsx
 │   ├── Contact.jsx
 │   ├── Footer.jsx
+│   │
 │   ├── DashboardNavbar.jsx
 │   ├── Sidebar.jsx
 │   ├── NotesGrid.jsx
 │   ├── NoteCard.jsx
+│   │
+│   ├── ViewNoteModal.jsx
 │   ├── NoteModal.jsx
 │   ├── DeleteModal.jsx
 │   └── DeleteAllModal.jsx
@@ -120,27 +173,14 @@ NoteFlow/
 │
 ├── public/
 │
-└── package.json
+├── globals.css
+├── package.json
+└── README.md
 ```
-
-### Core Features
-
-- Create Notes
-- Edit Notes
-- Delete Individual Notes
-- Delete All Notes
-- Search Notes by Title
-- Sort Notes by Latest
-- Sort Notes by Oldest
-- Responsive Design
-- Dark Mode Support
-- Local Storage Persistence
-- Animated Landing Page
 ---
 
 <h2><a class="anchor" id="how-to-run-this-project"></a>How to Run This Project</h2>
 
-## How to Run This Project
 ### 1. Clone the Repository
 
 ```bash
